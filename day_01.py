@@ -45,5 +45,8 @@ if __name__ == "__main__":
     with open(Path("data") / "day_01" / "input.txt", mode="r", encoding="utf-8") as f:
          input = f.read()
         
-    result = solution_2(input)
-    print(result)
+    sol_1 = solution_1(input)
+    print("Puzzle 1: ", sol_1)
+
+    sol_2 = solution_2(input)
+    print("Puzzle 1: ", sol_2)
