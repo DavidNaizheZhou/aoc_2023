@@ -13,7 +13,7 @@ def solution_1(input:str) -> int:
         numbers.append(get_number(line))
     return sum(numbers)
 
-def day1_2_replace_spelled_out(input:str) -> str:
+def replace_spelled_out(input:str) -> str:
     input = input.lower()
     mapping = {
             "zero":"z0ro",
@@ -33,7 +33,7 @@ def day1_2_replace_spelled_out(input:str) -> str:
     return input
 
 def solution_2(input:str)->int:
-    input = day1_2_replace_spelled_out(input)
+    input = replace_spelled_out(input)
     numbers = []
     for line in input.split("\n"):
         numbers.append(get_number(line))

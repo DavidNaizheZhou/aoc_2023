@@ -20,7 +20,7 @@ def test_get_number():
 
 def test_replace_spelled_out():
     input = "two1nine\neightwothree\nabcone2threexyz\nxtwone3four\n4nineeightseven2\nzoneight234\n7pqrstsixteen"
-    input = day1_2_replace_spelled_out(input)
+    input = replace_spelled_out(input)
     lines = input.split("\n")   
     results = [29, 83, 13, 24, 42, 14,76]
 
