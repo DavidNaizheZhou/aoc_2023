@@ -19,10 +19,3 @@ def test_solution_1(example):
 
 def test_solution_2(example):
     assert day_02.solution_2(example) == 2286
-
-def test_count_cubes2(example):
-    games_array = day_02.assembly_games_array(example)
-    columns = day_02.count_columns(games_array)
-
-    mask = (columns[:,0]<=12) & (columns[:,1]<=13)  & (columns[:,2]<=14)
-    assert np.sum(np.where(mask)[0]+1) == 8

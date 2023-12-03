@@ -61,17 +61,6 @@ def get_color_columns(games_array:npt.NDArray[np.int64], index:int=0) -> npt.NDA
     cols = np.array(range(0,games_array.shape[1], 3))+index
     return games_array[:, cols]
 
-def count_columns(games_array:npt.NDArray[np.int64]) -> npt.NDArray[np.int64]:
-    red_cols = np.array(range(0,games_array.shape[1], 3))
-    green_cols = np.array(range(0,games_array.shape[1], 3))+1
-    blue_cols = np.array(range(0,games_array.shape[1], 3))+2
-
-    red_count = np.sum(games_array[:, red_cols], axis=1)
-    green_count = np.sum(games_array[:, green_cols], axis=1)
-    blue_count = np.sum(games_array[:, blue_cols], axis=1)
-
-    return np.stack([red_count, green_count, blue_count]).T
-
 def solution_1(input:str) -> int:
     games_array = assembly_games_array(input)
     reds = get_color_columns(games_array, index=0)
