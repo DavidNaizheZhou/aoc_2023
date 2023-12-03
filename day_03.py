@@ -29,9 +29,6 @@ def sum_condition(array):
     issymbol = ~np.char.isalnum(array) 
     return np.any(issymbol)
 
-def star_mask(array):
-    return array=="*"
-
 def star_condition(array):
     return np.any(array=="*")
 
