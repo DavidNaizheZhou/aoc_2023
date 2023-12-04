@@ -63,7 +63,7 @@ def solution_2(input):
 
     adjacents = np.array(adjacents)
     numbers_list = np.array(numbers_list)
-    unique, indices, counts = np.unique(adjacents, return_counts=True, return_index=True, axis=0)
+    unique, counts = np.unique(adjacents, return_counts=True, axis=0)
     mask = counts>1
 
     sum_gear_ratios = 0
