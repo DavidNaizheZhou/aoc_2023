@@ -13,5 +13,9 @@ def test_solution_1(example):
     assert day_04.solution_1(example) == 13
 
 
+def test_calc_copies(example):
+    assert day_04.calc_copies(example) == 30
+
+
 def test_solution_2(example):
     assert day_04.solution_2(example) == 30
